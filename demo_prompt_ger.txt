@@ -1,0 +1,94 @@
+Fasse die folgende Unterhaltung als SEO-optimierten WordPress-Artikel in JSON zusammen. Schreibe auf Deutsch und adressiere den Leser in der informellen Du-Form. 
+Berücksichtige dabei HTML-Formatierung, interne und externe Links sowie eine sinnvolle Strukturierung und verwende ausschließlich UTF-8 Zeichen im gesamten JSON.
+
+### JSON-Format:
+{
+  "title": "SEO-optimierter Titel des Artikels",
+  "content": "Hier kommt der vollständige HTML-formatierte Artikel hinein...",
+  "status": "draft",
+  "date": "2025-02-24T10:00:00",
+  "categories": [BESTE_KATEGORIE_ID],
+  "tags": [BESTE_TAGS],
+  "author": 1
+}
+
+---
+
+### Anforderungen an `title`:
+- Erzeuge einen **prägnanten, SEO-freundlichen Titel** mit relevanten Keywords.
+- Der Titel soll **50-60 Zeichen lang** sein (optimal für Google-Snippets).
+
+---
+
+### Anforderungen an `content`:
+1. **Allgemeine Struktur & Formatierung:**
+   - Der gesamte Content darf **niemals mit einer Überschrift beginnen**.
+   - Gliedere den Inhalt in drei logische Teile: einen einleitenden Teil, einen ausführlichen Hauptteil und einen abschließenden Teil – ohne, dass die Worte „Einleitung“, „Hauptteil“ oder „Ende“ im Text vorkommen.
+   - **Die Einleitung ist immer als ein einziger kompletter Absatz zu formulieren.**
+   - **Überschriften (beginnend mit `<h2>`) dürfen nur im Hauptteil verwendet werden.** Im abschließenden Teil muss **genau eine einzelne `<h2>`-Überschrift** stehen, die diesen Abschnitt einleitet.
+   - Stelle sicher, dass der gesamte Inhalt im `content`-Feld validen, korrekt geschachtelten HTML-Code enthält.
+   - Achte darauf, dass doppelte Anführungszeichen und andere Zeichen korrekt escaped werden, sodass das JSON vollständig konform und UTF-8 ist.
+
+2. **Einleitung (ca. 3-4 Sätze):**
+   - Erkläre, warum das Thema relevant ist, wen es betrifft und welche Fragen sich die User stellen, auf die der Artikel eine Antwort gibt.
+   - Die Einleitung endet mit einem `<!--more-->`-Tag, um in WordPress einen "Weiterlesen"-Link zu erzeugen.
+
+3. **Hauptteil:**
+   - Erkläre das Thema detailliert, als ob ein Freund einem anderen Freund etwas erklärt – sympathisch, menschlich und zugleich sachlich korrekt.
+   - Verwende im Hauptteil, wo sinnvoll, `<h2>`-Überschriften zur besseren Gliederung.
+   - **Verwende Aufzählungen (ordered `<ol>` oder unordered `<ul>` Lists) nur, wenn mindestens drei zusammenhängende Punkte sinnvoll gruppierbar sind.** Sind weniger als drei Punkte vorhanden, formuliere sie als fortlaufenden Satz.
+
+4. **Abschließender Teil:**
+   - Fasse die wichtigsten Erkenntnisse und Kernbotschaften aus dem Hauptteil in ca. 3-4 Sätzen zusammen.
+   - Vor diesem abschließenden Absatz muss **genau eine `<h2>`-Überschrift** stehen, die diesen Abschnitt einleitet.
+
+5. **Codebeispiele & Syntax Highlighting:**
+   - Wenn Codebeispiele oder Listings vorkommen, bette diese so ein, dass das WordPress-Plugin „Enlighter – Customizable Syntax Highlighter“ genutzt wird.  
+     **Beispiel:**  
+     ```html
+     <pre data-enlighter-language="python">
+     def hello_world():
+         print("Hello, World!")
+     </pre>
+     ```
+
+---
+
+### Automatische Kategorie-Auswahl:
+Wähle die passendste Kategorie basierend auf folgenden festen Zuordnungen:
+- Wenn das Thema technische Inhalte, API, Programmierung oder Webentwicklung behandelt, wähle bevorzugt:
+  - "Webentwicklung" → **ID 3**
+  - "Python & Automatisierung" → **ID 4**
+  - "Tools & Software" → **ID 7**
+- Wenn das Thema sich auf SEO, WordPress oder Marketing bezieht, wähle bevorzugt:
+  - "SEO & Online-Marketing" → **ID 2**
+  - "WordPress" → **ID 1**
+- Für Themen zu Daten, Hosting oder Servern:
+  - "Datenanalyse & KI" → **ID 5**
+  - "Hosting & Server" → **ID 6**
+- Falls keine passende Zuordnung möglich ist, setze `[1]` als Standard.
+
+---
+
+### Automatische Tag-Auswahl:
+1. **Wähle 3-5 Tags aus dieser Liste, falls sie zum Inhalt passen:**
+   - "WordPress"
+   - "SEO"
+   - "REST API"
+   - "Python"
+   - "Automatisierung"
+   - "Datenanalyse"
+   - "Hosting"
+   - "Performance"
+   - "Sicherheit"
+   - "Webentwicklung"
+
+2. **Ermittle zusätzlich 3-5 neue Tags aus dem Content.**
+   - Falls keine neuen Tags ermittelt werden können, verwende ausschließlich die vorgegebenen Tags.
+   - Die Tags sollen zuerst aus der vorgegebenen Liste gewählt werden und erst danach, falls möglich, durch inhaltliche Ergänzungen ergänzt werden.
+
+---
+
+### Antwortformat:
+- Antworte **nur mit dem JSON**, ohne zusätzliche Erklärungen.
+- Achte darauf, dass das JSON **gültiges, korrektes HTML** im `content`-Feld enthält und alle Zeichen UTF-8 konform sind.
