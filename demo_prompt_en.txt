@@ -1,0 +1,94 @@
+Summarize the following conversation as an SEO-optimized WordPress article in JSON. Write in English and address the reader in the informal "you" form.  
+Consider HTML formatting, internal and external links as well as a meaningful structure, and use only UTF-8 characters throughout the entire JSON.
+
+### JSON Format:
+{
+  "title": "SEO-optimized title of the article",
+  "content": "Here goes the complete HTML formatted article...",
+  "status": "draft",
+  "date": "2025-02-24T10:00:00",
+  "categories": [BEST_CATEGORY_ID],
+  "tags": [BEST_TAGS],
+  "author": 1
+}
+
+---
+
+### Requirements for `title`:
+- Generate a **concise, SEO-friendly title** with relevant keywords.
+- The title should be **50-60 characters long** (optimal for Google snippets).
+
+---
+
+### Requirements for `content`:
+1. **General Structure & Formatting:**
+   - The entire content must **never start with a heading**.
+   - Divide the content into three logical parts: an introductory part, a detailed main part, and a concluding part – without the words "Introduction", "Main Part" or "Conclusion" appearing in the text.
+   - **The introduction must always be formulated as a single complete paragraph.**
+   - **Headings (starting with `<h2>`) may only be used in the main part.** In the concluding part, **exactly one `<h2>` heading** must precede the section.
+   - Ensure that the entire content in the `content` field contains valid, correctly nested HTML code.
+   - Make sure that double quotes and other characters are correctly escaped so that the JSON is fully compliant and in UTF-8.
+
+2. **Introduction (about 3-4 sentences):**
+   - Explain why the topic is relevant, whom it concerns, and which questions the users might have that the article answers.
+   - The introduction ends with a `<!--more-->` tag to create a "read more" link in WordPress.
+
+3. **Main Part:**
+   - Explain the topic in detail, as if one friend were explaining something to another friend – friendly, personable, and yet factually correct.
+   - Use `<h2>` headings in the main part where appropriate for better structure.
+   - **Use lists (ordered `<ol>` or unordered `<ul>` lists) only if at least three related points can be sensibly grouped.** If there are fewer than three points, formulate them as a continuous sentence.
+
+4. **Concluding Part:**
+   - Summarize the most important findings and key messages from the main part in about 3-4 sentences.
+   - There must be **exactly one `<h2>` heading** immediately before this concluding paragraph, which introduces this section.
+
+5. **Code Examples & Syntax Highlighting:**
+   - If code examples or listings are included, embed them so that the WordPress plugin “Enlighter – Customizable Syntax Highlighter” is used.  
+     **Example:**  
+     ```html
+     <pre data-enlighter-language="python">
+     def hello_world():
+         print("Hello, World!")
+     </pre>
+     ```
+
+---
+
+### Automatic Category Selection:
+Choose the most appropriate category based on the following fixed assignments:
+- If the topic deals with technical content, API, programming, or web development, preferably choose:
+  - "Web Development" → **ID 3**
+  - "Python & Automation" → **ID 4**
+  - "Tools & Software" → **ID 7**
+- If the topic is related to SEO, WordPress, or marketing, preferably choose:
+  - "SEO & Online Marketing" → **ID 2**
+  - "WordPress" → **ID 1**
+- For topics on data, hosting, or servers:
+  - "Data Analysis & AI" → **ID 5**
+  - "Hosting & Servers" → **ID 6**
+- If no suitable assignment is possible, set `[1]` as default.
+
+---
+
+### Automatic Tag Selection:
+1. **Choose 3-5 tags from this list if they fit the content:**
+   - "WordPress"
+   - "SEO"
+   - "REST API"
+   - "Python"
+   - "Automation"
+   - "Data Analysis"
+   - "Hosting"
+   - "Performance"
+   - "Security"
+   - "Web Development"
+
+2. **Additionally determine 3-5 new tags from the content.**
+   - If no new tags can be determined, use only the provided tags.
+   - The tags should first be chosen from the provided list and then, if possible, supplemented by content-based additions.
+
+---
+
+### Response Format:
+- Respond **only with the JSON**, without additional explanations.
+- Ensure that the JSON contains **valid, correct HTML** in the `content` field and that all characters conform to UTF-8.
