@@ -71,7 +71,7 @@ After activation, a new top-level menu item **JSON Post Importer** will appear i
 
 ## Demo JSON Example
 
-A sample `demo.json` file is provided created with the `prompt.txt` entered at the end of a conversation with ChatGPT.
+A sample `demo.json` file is provided created with an appropriate prompt entered at the end of a conversation with ChatGPT.
 
 ## JSON Options
 
